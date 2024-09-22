@@ -1,0 +1,91 @@
+@import "utils/variables.scss";
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", "sans-serif";
+
+
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: $black;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Nunito", "sans-serif";
+}
+p,h1,h2,h3,h4,h5,h6,span{
+  &::selection{
+    background-color: $secondaryGreen;
+  }
+}
+a,button{
+  cursor: pointer;
+}
+
+.v_container {
+  max-width: 1440px;
+
+
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.v_padding_horizontal {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.v_padding_vertical {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+
+@media (max-width:860px) {
+  .v_padding_horizontal {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .v_padding_vertical {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width:540px) {
+  .v_padding_horizontal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .v_padding_vertical {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// custom scrollbar
+
+// ::-webkit-scrollbar{
+//   width: 10px;
+
+// }
+// ::-webkit-scrollbar-track{
+//   // background-color: #d1e5ff;
+// }
+// ::-webkit-scrollbar-thumb{
+//   // background: linear-gradient(#6429ff,#ff22e6);
+  
+//   border-radius: 10px;
+// }

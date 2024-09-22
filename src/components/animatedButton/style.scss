@@ -1,0 +1,125 @@
+@import "/src/utils/variables.scss";
+
+.selectnone {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.v_animated_btn {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    row-gap: 2px;
+    cursor: pointer;
+    transition: background-color 0.4s, box-shadow 0.4s, transform 0.4s;
+    background-color: $iconGreen;
+    color: $black;
+    position: relative;
+    overflow: hidden;
+
+    span {
+        color: $black;
+        transition: opacity 0.4s, width 0.4s;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    svg {
+        transition: transform 0.4s;
+        position: relative;
+
+        &.svgtwo {
+            opacity: 0;
+            position: absolute;
+            transform: translate(-27px, 35px);
+        }
+
+        &.svgone {}
+    }
+
+    &:hover {
+        background-color: $iconRose;
+        box-shadow: 0px 10px 10px rgba(255, 158, 194, 0.527);
+    }
+
+    &.loadingState {
+        pointer-events: none;
+        user-select: none;
+
+        span {
+            opacity: 0;
+            position: absolute;
+
+        }
+
+        background-color: $iconRose;
+        box-shadow: 0px 10px 10px rgba(255, 158, 194, 0.527);
+
+        span {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+        }
+
+        svg {
+
+            // transform: translateX(-7%);
+            &.svgone {
+                animation: moveUpSvgOne 1.2s ease forwards;
+            }
+
+            &.svgtwo {
+                animation: moveUpSvgTwo 2.8s ease forwards;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    &.successState {
+        // Add styles for success state if needed
+    }
+}
+
+@keyframes moveUpSvgOne {
+    0% {
+
+        transform: translate(-8px, 0px);
+    }
+
+    100% {
+
+        transform: translate(15px, -36px);
+    }
+
+}
+
+@keyframes moveUpSvgTwo {
+    0% {
+        opacity: 1;
+        transform: translate(-24px, 35px);
+    }
+
+    55% {
+        transform: translateX(-5px) rotate(35deg);
+    }
+
+    79% {
+        transform: translateX(0px) rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(15px, -36px) rotate(0deg);
+    }
+
+
+}

@@ -1,0 +1,78 @@
+@import "/src/utils/variables.scss";
+
+
+
+// marquee about me
+.v_about_me_marqee_container {
+    background-color: $primaryGreen ;
+    padding: 20px 0;
+    margin-bottom: 36px;
+
+    div.rfm-child {
+
+        p {
+            font-size: 35px;
+            color: #000;
+            font-weight: 600;
+            white-space: nowrap;
+            line-height: 1;
+            margin: 0 42px;
+
+
+        }
+
+        &:nth-child(even) p {
+            -webkit-text-stroke: 1px #000;
+            color: transparent;
+        }
+
+    }
+}
+
+//marquee works 
+.v_work_marqee_container {
+    p {
+        text-transform: uppercase;
+
+        color: #fff;
+        font-family: "Jost", "san-seriff";
+    }
+}
+
+
+@media (max-width:640px) {
+    .v_about_me_marqee_container {
+        padding: 10px 0;
+
+        div.rfm-child {
+
+            p {
+                font-size: 24px;
+                margin: 0 32px;
+            }
+        }
+    }
+    .v_work_marqee_container{
+        p{
+            font-size: 40px;
+        }
+    }
+}
+@media (max-width:480px) {
+    .v_about_me_marqee_container {
+        padding: 10px 0;
+
+        div.rfm-child {
+
+            p {
+                font-size: 16px;
+                margin: 0 20px;
+            }
+        }
+    }
+    .v_work_marqee_container{
+        p{
+            font-size: 30px;
+        }
+    }
+}

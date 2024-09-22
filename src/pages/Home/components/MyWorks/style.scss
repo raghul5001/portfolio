@@ -1,0 +1,41 @@
+@import "/src/utils/variables.scss";
+.v_myworks_master_container{
+    padding-top: 50px !important;
+    h2 {
+        transition: .3s;
+        filter: drop-shadow(0 0 14px #80db66);
+       
+    }
+
+    .v_cards_wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        img{
+            object-fit: cover;
+        }
+    }
+    
+}
+
+
+@media (max-width:860px) {
+    .v_myworks_master_container{
+
+        .v_cards_wrapper{
+            gap: 30px;
+        }
+        
+    }
+  }
+
+  @media (max-width:640px) {
+.v_myworks_master_container{
+    .v_cards_wrapper{
+        grid-template-columns: 1fr ;
+        .v_work_card_img_container{
+            // height: 300px;
+        }
+    }
+}
+  }

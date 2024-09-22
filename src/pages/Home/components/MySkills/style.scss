@@ -1,0 +1,56 @@
+@import "/src/utils/variables.scss";
+
+.v_my_skills_master_container{
+    .v_mys_card_wrapper{
+        margin: 16px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap:30px;
+        article{
+            width: 100%;
+            height: 300px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 8px;
+            img{
+               height: 180px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:640px) {
+    .v_my_skills_master_container{
+        .v_mys_card_wrapper{
+            grid-template-columns: 1fr 1fr;
+            article{
+                height: 200px;
+                img{
+                height: 150px;
+                }
+            }
+        }
+      
+    }
+}
+@media (max-width:480px) {
+    .v_my_skills_master_container{
+        .v_mys_card_wrapper{
+            
+            article{
+                height: 140px;
+                img{
+                height: 80px;
+                }
+            }
+        }
+      
+    }
+}

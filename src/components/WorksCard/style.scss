@@ -1,0 +1,54 @@
+@import "/src/utils/variables.scss";
+
+.v_work_card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    &:hover{
+        img{
+            transform: scale(1.01);
+        }
+        .v_work_card_con_container{
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.4s;
+        transform: scale(1);
+        will-change: transform;
+    }
+    .v_work_card_img_container{
+     
+
+    }
+
+    .v_work_card_con_container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.624);
+        transition: all 0.2s;
+        opacity: 0;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+         p{
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            width: 75%;
+            text-align: center;
+         }
+    }
+}

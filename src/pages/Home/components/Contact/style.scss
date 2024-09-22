@@ -1,0 +1,68 @@
+@import "/src/utils/variables.scss";
+
+.v_contact_me_container {
+
+    .text-stroke-3 {
+        color: $black;
+
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+    }
+
+    form {
+        width: 100%;
+        margin: auto;
+        max-width: 740px;
+        padding: 30px 20px;
+     
+
+
+        input,
+        textarea {
+            background-color: transparent !important;
+            border-radius: 8px;
+            margin-top: 6px;
+            color: #97898D;
+            border: 0;
+            border: 1px solid #4A4244;
+            padding: 10px 14px;
+            display: block;
+            width: 100%;
+            transition: all .8s;
+
+            &:hover {
+                background-color: transparent;
+                box-shadow: #1677ff 0px 4px 15px !important;
+            }
+
+            &:focus {
+                background-color: transparent;
+                box-shadow: #1677ff 0px 4px 15px !important;
+            }
+        }
+    }
+
+}
+
+@media (max-width:1024px) {}
+
+@media (max-width:992px) {}
+
+@media (max-width:640px) {
+    .v_contact_me_container {
+        h2 {
+            font-size: 15vw;
+        }
+    }
+
+}
+
+
+@media (max-width:420px) {
+    .v_contact_me_container {
+
+        h2 {
+            font-size: 17vw;
+        }
+    }
+}

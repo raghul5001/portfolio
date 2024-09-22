@@ -1,0 +1,86 @@
+@import "/src/utils/variables.scss";
+
+.v_aboutme {
+    h2 {
+        transition: .3s;
+
+        &:hover {
+            filter: drop-shadow(0 0 14px #FFF);
+        }
+    }
+
+    // img style
+    .v_about_img_container {
+        position: relative;
+
+        img {
+            max-width: 100%;
+            aspect-ratio: 61/75;
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .v_aboutme {
+        .v_about_img_shape_one {
+            width: 90px;
+            height: 110px;
+            right: -16px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .v_aboutme {
+        flex-direction: column;
+        align-items: center;
+
+        .v_about_img_shape_two {
+            bottom: -20px;
+            width: 35px;
+            height: 54px;
+        }
+
+        p,
+        h2 {
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+
+
+    }
+}
+
+@media (max-width:540px) {
+    .v_aboutme {
+        .v_about_star_white {
+            width: 30px;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .v_aboutme {
+        .v_about_img_shape_one {
+            width: 50px;
+            height: 70px;
+            top: -20px;
+        }
+
+        .v_about_img_shape_two {
+            bottom: -13px;
+            width: 25px;
+            height: 40px;
+        }
+
+        .v_about_img_shape_three {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
